@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yash Alok | Journey & Achievements</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-content h1{
+      font-size:70px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    .hero-content h2{
+      font-size:28px;
+      margin-top:10px;
+      color:#38bdf8;
+    }
+
+    .hero-content p{
+      max-width:900px;
+      margin:auto;
+      margin-top:20px;
+      line-height:1.8;
+      font-size:18px;
+      color:#d1d5db;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:30px;
+      padding:14px 35px;
+      background:#38bdf8;
+      color:#000;
+      border-radius:40px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.4s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      background:#0ea5e9;
+    }
+
+    section{
+      padding:90px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:42px;
+      margin-bottom:60px;
+      color:#38bdf8;
+      position:relative;
+    }
+
+    .timeline{
+      position:relative;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .timeline::after{
+      content:'';
+      position:absolute;
+      width:5px;
+      background:#38bdf8;
+      top:0;
+      bottom:0;
+      left:50%;
+      margin-left:-3px;
+    }
+
+    .container{
+      padding:10px 40px;
+      position:relative;
+      width:50%;
+    }
+
+    .container.left{
+      left:0;
+    }
+
+    .container.right{
+      left:50%;
+    }
+
+    .content{
+      padding:25px;
+      background:#1e293b;
+      position:relative;
+      border-radius:15px;
+      box-shadow:0 0 20px rgba(0,0,0,0.4);
+      transition:0.4s;
+    }
+
+    .content:hover{
+      transform:translateY(-8px);
+    }
+
+    .container::after{
+      content:'';
+      position:absolute;
+      width:25px;
+      height:25px;
+      right:-17px;
+      background:#38bdf8;
+      border:4px solid #0f172a;
+      top:25px;
+      border-radius:50%;
+      z-index:1;
+    }
+
+    .right::after{
+      left:-16px;
+    }
+
+    .content h3{
+      color:#38bdf8;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .content ul{
+      padding-left:20px;
+      line-height:1.9;
+      color:#d1d5db;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:20px;
+      height:250px;
+      object-fit:cover;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1e293b;
+      padding:30px;
+      border-radius:20px;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:#38bdf8;
+    }
+
+    .footer{
+      text-align:center;
+      padding:40px;
+      background:#020617;
+      color:#94a3b8;
+    }
+
+    @media screen and (max-width:768px){
+
+      .timeline::after{
+        left:31px;
+      }
+
+      .container{
+        width:100%;
+        padding-left:70px;
+        padding-right:25px;
+      }
+
+      .container.right{
+        left:0%;
+      }
+
+      .container.left::after,
+      .container.right::after{
+        left:15px;
+      }
+
+      .hero-content h1{
+        font-size:45px;
+      }
+
+      .hero-content h2{
+        font-size:22px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>YASH ALOK</h1>
+      <h2>Leader • Innovator • Cultural Coordinator • Financial Enthusiast</h2>
+
+      <p>
+        Journey of leadership, dedication, technical excellence, cultural management,
+        financial market exposure, social initiatives, and student empowerment at
+        National Institute of Technology Agartala.
+      </p>
+
+      <a href="#timeline" class="btn">Explore Journey</a>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+
+  <section id="timeline">
+    <h2 class="section-title">Journey Roadmap</h2>
+
+    <div class="timeline">
+
+      <div class="container left">
+        <div class="content">
+          <h3>School Leadership Journey</h3>
+          <ul>
+            <li>Flute Player Lead</li>
+            <li>Platoon Vice Commander</li>
+            <li>Assembly Overall In-charge</li>
+            <li>Drama Lead (Class 9 & 10)</li>
+            <li>Overall Discipline In-charge</li>
+            <li>Event Management Lead</li>
+            <li>Class Captain</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>Engineering at NIT Agartala</h3>
+          <ul>
+            <li>B.Tech in Civil Engineering</li>
+            <li>CGPA: 8.31</li>
+            <li>Strong involvement in technical & cultural domains</li>
+            <li>Leadership across multiple organizations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>Assistant General Secretary – Cultural</h3>
+          <ul>
+            <li>Execution of Moksha 9.0</li>
+            <li>Organised inter-college competitions</li>
+            <li>Led Global Alumni Meet 2025</li>
+            <li>Led Tech Conclave 2025</li>
+            <li>Improved coordination among clubs</li>
+            <li>Enhanced student participation</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>Think India Leadership</h3>
+          <ul>
+            <li>Campus Ambassador</li>
+            <li>Finance-cum-Head of Operations</li>
+            <li>Organised Darshnam & Samarthya</li>
+            <li>Flood Relief & Donation Camps</li>
+            <li>Led North East Summit Team at IIT Guwahati</li>
+            <li>Organised personality development sessions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h3>Technical & Finance Achievements</h3>
+          <ul>
+            <li>Data Analyst Intern at FinEaze</li>
+            <li>Qualified RBI Quiz State Level</li>
+            <li>Qualified L&T & HPCL Hackathon Round 2</li>
+            <li>Multiple Trading Competition Participant</li>
+            <li>Stock Market & Data Science Certifications</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h3>Placements & Future Goals</h3>
+          <ul>
+            <li>Placed at ICICI Bank as Deputy Manager II</li>
+            <li>PPO Awaited from FinEaze</li>
+            <li>Future First FTE Opportunity Awaited</li>
+            <li>Vision towards finance, leadership & management</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section>
+    <h2 class="section-title">Leadership & Impact</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Cultural Leadership</h3>
+        <p>
+          Successfully coordinated large-scale events, student clubs,
+          social initiatives, and inter-college competitions while ensuring
+          effective team collaboration and execution excellence.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Technical Growth</h3>
+        <p>
+          Developed technical expertise in Data Science, Financial Markets,
+          AutoCAD, Trading Analytics, Power BI, SQL, and Visualization tools
+          through internships, projects, and competitions.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Social Contribution</h3>
+        <p>
+          Led flood relief camps, food donation drives, cleanliness campaigns,
+          mentorship sessions, and awareness initiatives for student development
+          and community welfare.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IMAGE GALLERY -->
+
+  <section>
+    <h2 class="section-title">Journey Gallery</h2>
+
+    <div class="gallery">
+
+      <img src="https://images.unsplash.com/photo-1511578314322-379afb476865" alt="">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
+      <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754" alt="">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="">
+      <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a" alt="">
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+
+  <section>
+    <h2 class="section-title">Major Achievements</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Academic Excellence</h3>
+        <ul>
+          <li>95.4% in Intermediate</li>
+          <li>94.4% in Secondary Education</li>
+          <li>Qualified JEE Mains & Advanced</li>
+          <li>Qualified NDA & TES Examinations</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Competitions</h3>
+        <ul>
+          <li>Winner of Hindi Saptah 2024</li>
+          <li>Multiple Trading Competition Participant</li>
+          <li>RBI Quiz State Level Qualifier</li>
+          <li>Olympiad Achievements</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Leadership Roles</h3>
+        <ul>
+          <li>Assistant General Secretary – Cultural</li>
+          <li>Campus Ambassador – Think India</li>
+          <li>Overall Student Coordinator – Aaveg</li>
+          <li>Finance-cum-Head of Operations</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VISION -->
+
+  <section>
+    <h2 class="section-title">Mission & Vision</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Student Development</h3>
+        <p>
+          Build a culture of mentorship, leadership, and collaboration
+          among students through structured engagement programs.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Club Integration</h3>
+        <p>
+          Create a unified ecosystem connecting technical, cultural,
+          sports, and entrepreneurship clubs for holistic growth.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Future Leadership</h3>
+        <p>
+          Aim to contribute towards finance, management, public leadership,
+          and impactful social initiatives through strategic thinking and execution.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <div class="footer">
+    <h2>THANK YOU</h2>
+    <p>
+      "Leadership is the capacity to translate vision into reality."
+    </p>
+  </div>
+
+</body>
+</html>
